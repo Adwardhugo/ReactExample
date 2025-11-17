@@ -1,0 +1,34 @@
+.edu-block h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #e8ebff; /* 亮科技白蓝 */
+}
+
+.edu-block h3 {
+  font-size: 17px;
+  opacity: 0.85;
+  margin-bottom: 5px;
+  color: #c7cdff; /* 柔和浅蓝 */
+}
+
+/* ===== Time Label ===== */
+.edu-time {
+  font-size: 15px;
+  margin-bottom: 18px;
+  opacity: 0.75;
+  color: #cdd2ff;
+}
+
+/* ===== List Items ===== */
+.edu-block ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.edu-block ul li {
+  margin-bottom: 8px;
+  opacity: 0.88;
+  font-size: 15px;
+  line-height: 1.5;
+}

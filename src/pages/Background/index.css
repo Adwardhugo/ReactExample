@@ -1,0 +1,80 @@
+.body{
+    background-color: #000749;
+}
+
+.edu-wrapper {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.edu-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease;
+}
+
+/* 每个阶段块 */
+.edu-block {
+  margin-bottom: 40px;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+/* 标题颜色适配背景 */
+.edu-block h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #000749;
+}
+
+.edu-block h3 {
+  font-size: 17px;
+  opacity: 0.85;
+  margin-bottom: 5px;
+  color: #000749;
+}
+
+.edu-time {
+  font-size: 15px;
+  margin-bottom: 18px;
+  opacity: 0.75;
+  color: #000749;
+}
+
+.edu-block ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.edu-block ul li {
+  margin-bottom: 8px;
+  opacity: 0.88;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* --- 分割线现代设计 --- */
+.divider {
+  width: 70%;
+  height: 2px;
+  margin: 25px auto 40px;
+  background: linear-gradient(90deg, transparent, #10014d, transparent);
+  opacity: 0.6;
+  border-radius: 50px;
+}
+
+/* 动画 */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

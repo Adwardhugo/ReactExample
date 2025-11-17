@@ -1,0 +1,41 @@
+.my-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #001529; /* 深蓝背景 */
+  padding: 0 24px;
+  height: 64px;
+}
+
+/* 左边 Logo 区域 */
+.demo-logo a {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 导航链接区域 */
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+/* 链接基础样式 */
+.nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+/* 鼠标悬停 */
+.nav-links a:hover {
+  color: #40a9ff;
+}
+
+/* 当前激活路由高亮 */
+.nav-links a.active {
+  color: #1890ff;
+  font-weight: 600;
+}

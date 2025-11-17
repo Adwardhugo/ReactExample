@@ -1,0 +1,152 @@
+
+/* 整体居中 */
+.main-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* 顶部 Hero */
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  color: #555;
+  font-size: 1.2rem;
+}
+
+/* Summary Card */
+.summary-card {
+  text-align: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 50px;
+}
+
+.name-title {
+  margin-top: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.sub-slogan {
+  margin-top: 10px;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* 分割线 */
+.divider {
+  width: 80px;          /* 缩短线条 */
+  height: 2px;
+  background: #ddd;
+  border: none;
+  margin: 25px auto;
+  border-radius: 2px;
+}
+
+.contact-info {
+  margin-top: 15px;
+}
+
+/* Summary 文字段落 */
+.summary-text {
+  text-align: left;
+  margin-top: 20px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* 圆形头像 */
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.content_divider{
+  border: none;
+  height: 1px;
+  background: #e0e0e0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* Flex Card 区域 */
+.card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* 每一行卡片 */
+.card-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.card-row.reverse {
+  flex-direction: row-reverse;
+}
+
+/* 卡片图片 */
+.card-img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 卡片文字区域 */
+.card-content {
+  max-width: 50%;
+  
+}
+
+.card-content h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .card-row,
+  .card-row.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-content {
+    max-width: 100%;
+  }
+}

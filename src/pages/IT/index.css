@@ -1,0 +1,65 @@
+
+body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #1f2337, #2f3355);
+        color: #fff;
+    }
+
+    .container {
+        max-width: 900px;
+        margin: 50px auto;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 36px;
+        font-weight: 600;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .skill-card {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 25px 35px;
+        border-radius: 18px;
+        margin-bottom: 25px;
+        backdrop-filter: blur(8px);
+        transition: 0.3s ease;
+        animation: fadeUp 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-6px);
+        background: rgba(255, 255, 255, 0.17);
+    }
+
+    .skill-card h2 {
+        font-size: 22px;
+        margin-bottom: 12px;
+        color: #E3E7FF;
+    }
+
+    ul {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    ul li {
+        margin-bottom: 7px;
+        opacity: 0.9;
+        line-height: 1.5;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0; transform: translateY(-10px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    @keyframes fadeUp {
+        from {opacity: 0; transform: translateY(25px);}
+        to {opacity: 1; transform: translateY(0);}
+    }

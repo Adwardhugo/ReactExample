@@ -1,0 +1,97 @@
+body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Poppins', sans-serif;
+        background: radial-gradient(circle at top, #30365a, #1b1f33);
+        color: #fff;
+    }
+
+    h1 {
+        text-align: center;
+        margin: 40px 0 30px;
+        font-size: 36px;
+        font-weight: 600;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 360px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 22px 25px;
+        border-radius: 16px;
+        backdrop-filter: blur(8px);
+        transition: 0.35s ease;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        position: relative;
+        overflow: hidden;
+        animation: fadeUp 0.8s ease forwards;
+        opacity: 0;
+    }
+
+    .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+        background: rgba(255,255,255,0.13);
+    }
+
+    /* 顶部条纹美化 */
+    .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -40%;
+        width: 180%;
+        height: 6px;
+        background: linear-gradient(90deg, #7aa2ff, #9c7bff);
+        transform: skewX(-20deg);
+        opacity: 0.75;
+    }
+
+    .title {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: #000d51;
+    }
+
+    .subtitle {
+        font-size: 15px;
+        opacity: 0.85;
+        margin-bottom: 14px;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        line-height: 1.5;
+        opacity: 0.95;
+        font-size: 14px;
+    }
+
+    /* 动画 */
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(25px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
