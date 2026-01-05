@@ -32,8 +32,8 @@
 /* 主内容区域 */
 .layout-content {
   flex: 1;
-  padding: 24px;
   background: #fff;
-  margin: 16px;
+  padding: 20px 40px;
+  margin: 0 ;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }

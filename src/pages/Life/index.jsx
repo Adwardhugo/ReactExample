@@ -4,7 +4,7 @@ export default class Life extends Component {
   render() {
     return (
       <div>
-        Life..
+        <h1>kia ora!Welcome to my life!</h1>
       </div>
     )
   }

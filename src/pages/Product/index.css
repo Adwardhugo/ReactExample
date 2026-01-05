@@ -1,97 +1,132 @@
-body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Poppins', sans-serif;
-        background: radial-gradient(circle at top, #30365a, #1b1f33);
-        color: #fff;
-    }
 
-    h1 {
-        text-align: center;
-        margin: 40px 0 30px;
-        font-size: 36px;
-        font-weight: 600;
-        animation: fadeIn 1s ease-in-out;
-    }
+/* 初始状态：透明 + 下移 */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
 
-    .container {
-        width: 90%;
-        max-width: 1200px;
-        margin: auto;
-        padding-bottom: 50px;
-    }
+/* 当出现在视口时加上这个 class */
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 让整个 Product 区域更宽，减少左右空白 */
+.product-section {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
 
-    .cards {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 25px;
-        justify-content: center;
-    }
+    width: 100%;
+    max-width: 1600px;   /* 从 900 → 1600，大幅扩展内容区域 */
+    margin: 40px auto;
+    padding: 0 40px;     /* 控制左右的内边距，你可改成 20–80 */
+}
+.product-hr {
+  margin: 50px 0;                  /* 上下留白，模块间距 */
+  height: 1px;
+  border: none;
 
-    .card {
-        width: 360px;
-        background: rgba(255, 255, 255, 0.08);
-        padding: 22px 25px;
-        border-radius: 16px;
-        backdrop-filter: blur(8px);
-        transition: 0.35s ease;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        position: relative;
-        overflow: hidden;
-        animation: fadeUp 0.8s ease forwards;
-        opacity: 0;
-    }
+  /* 现代感渐变线 */
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0) 0%,
+    rgba(140,150,255,0.45) 20%,
+    rgba(11, 16, 67, 0.8) 50%,
+    rgba(140,150,255,0.45) 80%,
+    rgba(255,255,255,0) 100%
+  );
 
-    .card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-        background: rgba(255,255,255,0.13);
-    }
+  opacity: 0.9;
+}
 
-    /* 顶部条纹美化 */
-    .card::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: -40%;
-        width: 180%;
-        height: 6px;
-        background: linear-gradient(90deg, #7aa2ff, #9c7bff);
-        transform: skewX(-20deg);
-        opacity: 0.75;
-    }
+.product-image-title{
+  width: 100%;          /* 让标题占满整个 ui-images 宽度 */
+  text-align: center;   /* 文字水平居中 */
+  display: block;       /* 确保是块级元素 */
+  margin-bottom: 30px;
+}
+/* 左侧图片区域更宽 */
+.product-images {
+    width: 32%;          /* 原来太窄，改成 32% 屏幕宽度 */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
 
-    .title {
-        font-size: 20px;
-        font-weight: 600;
-        margin-bottom: 6px;
-        color: #000d51;
-    }
+/* 图片保持美观比例 */
+.product-img-wrapper {
+  width: 100%;
+  height: 320px;   /* 图片更大、更饱满，与 product 一致 */
+  border-radius: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255,255,255,0.10);         /* 更明显的玻璃拟态底色 */
+  border: 1px solid rgba(255,255,255,0.18);   /* 更清晰的细边框 */
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.32);     /* 增强阴影 */
+  transition: 0.35s ease;
+}
+/* 悬停效果类似你的 product 卡片 */
+.product-img-wrapper:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
 
-    .subtitle {
-        font-size: 15px;
-        opacity: 0.85;
-        margin-bottom: 14px;
-    }
+.product-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    ul {
-        padding-left: 20px;
-    }
+.product {
+    width: 450px;          /* 缩短线条 */
+    height: 2px;
+    background: #ddd;
+    border: none;
+    margin: 25px 20px;
+    border-radius: 2px;
+}
+/* 右侧文字更宽 */
+.product-content {
+    width: 60%;          /* 提升文字块的最大利用空间 */
+    max-width: 900px;    /* 比原来的 500 更宽敞 */
+}
 
-    ul li {
-        margin-bottom: 10px;
-        line-height: 1.5;
-        opacity: 0.95;
-        font-size: 14px;
-    }
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s ease;
+  z-index: 9999;
+}
 
-    /* 动画 */
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(25px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
 
-    @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-    }
+.lightbox img {
+  max-width: 92%;
+  max-height: 90%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+/* 打开时的缩放动效 */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

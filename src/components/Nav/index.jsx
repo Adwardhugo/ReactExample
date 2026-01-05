@@ -12,7 +12,7 @@ const subItemName = [
     [
     {key:4,label:<Link to="/IT">IT</Link>},
     // {key:5,label:<Link to="/Design">Design</Link>},
-    {key:6,label:<Link to="/Certification">Certification</Link>},
+    
   ],
     [
     {key:7,label:<Link to="/Product">Product Manager</Link>},

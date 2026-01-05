@@ -28,13 +28,42 @@ export default class Home extends Component {
 
             <hr className="divider"/>
             <p className="summary-text">
-                I am currently pursuing a Master's degree in Information Technology at the University of Auckland, where I continue to strengthen my technical expertise and broaden my understanding of modern digital systems. Prior to my postgraduate studies, I spent three years working as a Product Manager in the intelligent data-processing domain, where I led cross-functional teams, designed end-to-end product solutions, and delivered data-driven features for complex enterprise environments. This experience gave me a strong foundation in strategic planning, stakeholder communication, and turning user needs into scalable technology.
-                My technical skillset spans both frontend and backend development. 
-                <br/><br/>On the frontend, I am proficient with modern JavaScript frameworks—especially React, where I enjoy building interactive interfaces, reusable components, and responsive layouts that deliver an intuitive user experience.
-                <br/><br/>On the backend, I specialize in Java Spring Boot, designing RESTful APIs, implementing layered architectures, and building reliable data product frameworks that support modularity and maintainability. I work confidently with SQL databases, structuring relational models, optimizing queries, and connecting data pipelines across system layers.
-                I also have practical experience in data analysis using Python, leveraging tools such as pandas, NumPy, and visualization libraries to extract insights, perform exploratory analysis, and support data-driven decision-making in product contexts. 
-                <br/><br/>Combining this analytical ability with my engineering knowledge allows me to design products with a stronger understanding of both user behavior and system performance.
-                Before transitioning fully into the IT field, I majored in Interaction Media Design, which equipped me with a solid foundation in UI/UX principles, visual design, and human-centered thinking. This background allows me to bridge the worlds of design, product, and engineering—creating solutions that are not only technically robust but also aesthetically coherent and user-focused.
+            <p>
+              I am currently pursuing a Master's degree in Information Technology at the University of Auckland,
+              where I am deepening my expertise in modern software engineering, cloud architectures, and
+              data-driven systems. Before starting my postgraduate studies, I spent three years working as a 
+              <strong> Product Manager in intelligent data-processing platforms</strong>, where I led cross-functional teams, 
+              designed end-to-end product workflows, and delivered solutions in complex enterprise environments.
+            </p>
+
+            <p>
+              My technical skillset spans both <strong>frontend</strong> and <strong>backend</strong> development. On the frontend, 
+              I specialize in <strong>React</strong>, building component-based interfaces, reusable UI elements, 
+              <strong>Redux-powered state management</strong>, and responsive layouts that prioritize user experience.
+            </p>
+
+            <p>
+              On the backend, I focus on <strong>Java Spring Boot</strong>, designing <strong>RESTful APIs</strong>, layered 
+              service architectures, authentication flows, and scalable data processing pipelines. I work extensively 
+              with <strong>SQL databases</strong>—including schema modeling, query optimization, relational structuring, 
+              and end-to-end system integration.
+            </p>
+
+            <p>
+              I also have practical experience in <strong>data analysis</strong> using Python. By leveraging tools such as 
+              <strong>pandas, NumPy, and data visualization libraries</strong>, I conduct exploratory analysis, identify 
+              system bottlenecks, and support data-informed product decisions. This analytical ability enhances my 
+              engineering and product work, allowing me to design solutions with a clear understanding of both user 
+            behavior and technical performance.
+            </p>
+
+            <p>
+              Before transitioning fully into software engineering, I majored in <strong>Interaction Media Design</strong>, 
+              which gave me a solid foundation in <strong>UI/UX principles, visual communication, prototyping, and 
+              human-centered design</strong>. This interdisciplinary background allows me to bridge product strategy, 
+              engineering implementation, and user-focused design—creating systems that are technically robust, 
+            visually refined, and intuitive to use.
+            </p>
             </p>
           <section/>
           <section className="card-grid"></section>

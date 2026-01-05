@@ -11,21 +11,16 @@ import Background from './pages/Background';
 import Life from './pages/Life';
 import IT from './pages/IT';
 import Design from './pages/Design';
-import Certification from './pages/Certification';
 import UI from './pages/UI';
 import Software from './pages/Software';
 import Volunteer from './pages/Volunteer';
 import Barista from './pages/Barista';
 import Trainer from './pages/Trainer';
-
-
 import './AppTest.css';
 
 
 
-
 const { Sider, Content } = Layout;
-
 export default class AppTest extends Component {
   render() {
     return (
@@ -53,7 +48,6 @@ export default class AppTest extends Component {
                 <Route path ="/Life" element={<Life />}></Route>
                 <Route path ="/IT" element={<IT />}></Route>
                 <Route path ="/Design" element={<Design />}></Route>
-                <Route path ="/Certification" element={<Certification />}></Route>
                 <Route path ="/UI" element={<UI />}></Route>
                 <Route path ="/Software" element={<Software />}></Route>
                 <Route path ="/Volunteer" element={<Volunteer />}></Route>

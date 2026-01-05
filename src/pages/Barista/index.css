@@ -1,0 +1,203 @@
+/* ========================================================= */
+/* ==================   BARISTA SECTION   ================== */
+/* ========================================================= */
+/* 初始状态：透明 + 下移 */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 当出现在视口时加上这个 class */
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.barista-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+/* -------------------- 左侧图片区域 -------------------- */
+
+.Barista-image-title{
+  width: 100%;          /* 让标题占满整个 ui-images 宽度 */
+  text-align: center;   /* 文字水平居中 */
+  display: block;       /* 确保是块级元素 */
+  margin-bottom: 30px;
+}
+.barista-images {
+  width: 32%; 
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 图片外框（与 Product / Trainer 统一玻璃拟态风格） */
+.barista-img-wrapper {
+  width: 100%;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.28);
+  transition: 0.35s ease;
+}
+
+.barista-img-wrapper:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: rgba(255,255,255,0.16);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+}
+
+/* 图片保持比例，不拉伸 */
+.barista-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* -------------------- 右侧文字内容 -------------------- */
+
+.barista-content {
+  width: 60%;
+  max-width: 900px;
+}
+
+.barista-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #00062b;
+}
+
+.barista-subtitle {
+  font-size: 18px;
+  font-weight: 500;
+  color: #00062b;
+  margin-bottom: 6px;
+}
+
+.barista-time {
+  font-size: 15px;
+  margin-bottom: 18px;
+  color: #00062b;
+}
+
+/* -------------------- 技能标签 -------------------- */
+
+.barista-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.barista-tag {
+  background: rgba(255,255,255,0.12);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.17);
+  font-size: 14px;
+  color: #00062b;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.barista-tag:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+/* -------------------- 列表内容 -------------------- */
+
+.barista-list {
+  padding-left: 20px;
+}
+
+.barista-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 1.55;
+  opacity: 0.92;
+  color: #00062b;
+}
+
+/* -------------------- 图标 -------------------- */
+
+.barista-icons {
+  margin-top: 15px;
+  font-size: 26px;
+  display: flex;
+  gap: 12px;
+  color: #fff;
+}
+
+/* ========================================================= */
+/* ======================= LIGHTBOX ======================== */
+/* ========================================================= */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s ease;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+/* 打开时的缩放动效 */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ========================================================= */
+/* =================== MOBILE RESPONSIVE =================== */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+  .barista-section {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+
+  .barista-images {
+    width: 100%;
+  }
+
+  .barista-content {
+    width: 100%;
+  }
+}
+

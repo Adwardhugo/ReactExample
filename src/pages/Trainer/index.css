@@ -1,0 +1,199 @@
+/* ========================================================= */
+/* ==================   TRAINER SECTION   ================== */
+/* ========================================================= */
+
+
+/* 初始状态：透明 + 下移 */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 当出现在视口时加上这个 class */
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.trainer-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 40px auto;
+  padding: 0 40px;
+}
+
+/* -------------------- 左侧图片区域 -------------------- */
+.trainer-image-title{
+  width: 100%;          /* 让标题占满整个 ui-images 宽度 */
+  text-align: center;   /* 文字水平居中 */
+  display: block;       /* 确保是块级元素 */
+  margin-bottom: 30px;
+}
+.trainer-images {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* 图片外框（与 Product、UI、Barista 风格保持一致） */
+.trainer-img-wrapper {
+  width: 100%;
+  height: 260px; /* 统一尺寸 */
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+
+  background: rgba(255,255,255,0.10);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(6px);
+
+  transition: 0.35s ease;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.28);
+}
+
+.trainer-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainer-img-wrapper:hover {
+  transform: translateY(-6px) scale(1.03);
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.45);
+}
+
+/* -------------------- 右侧信息内容 -------------------- */
+.trainer-content {
+  width: 60%;
+  max-width: 900px;
+}
+
+.trainer-content h2 {
+  font-size: 28px;
+  margin-bottom: 6px;
+  color: #00062b;
+  font-weight: 700;
+}
+
+.trainer-content h3 {
+  font-size: 17px;
+  color: #00062b;
+  opacity: 0.85;
+  margin-bottom: 6px;
+}
+
+.edu-time {
+  font-size: 15px;
+  margin-bottom: 16px;
+  color: #00062b;
+}
+
+/* -------------------- 技能标签 -------------------- */
+
+.trainer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.tag {
+  background: #00062b(255,255,255,0.12);
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.18);
+  font-size: 14px;
+  color: #00062b;
+  backdrop-filter: blur(6px);
+  transition: 0.25s ease;
+}
+
+.tag:hover {
+  background: rgba(255,255,255,0.18);
+  transform: translateY(-2px);
+}
+
+/* -------------------- 列表内容 -------------------- */
+.trainer-content ul {
+  padding-left: 20px;
+}
+
+.trainer-content ul li {
+  margin-bottom: 10px;
+  line-height: 1.55;
+  opacity: 0.92;
+  font-size: 15px;
+  color: #00062b;
+}
+
+/* -------------------- 图标 -------------------- */
+.trainer-icons {
+  margin-top: 15px;
+  font-size: 28px;
+  display: flex;
+  gap: 12px;
+  color: #fff;
+}
+
+/* ========================================================= */
+/* ======================= LIGHTBOX ======================== */
+/* ========================================================= */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.35s ease;
+  z-index: 9999;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox img {
+  max-width: 92%;
+  max-height: 90%;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+/* 放大动画 */
+@keyframes zoomIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* ========================================================= */
+/* ===================  MOBILE RESPONSIVE ================== */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+  .trainer-section {
+    flex-direction: column;
+    padding: 0 20px;
+  }
+  .trainer-images {
+    width: 100%;
+  }
+  .trainer-content {
+    width: 100%;
+  }
+}
